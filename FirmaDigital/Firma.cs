@@ -29,7 +29,6 @@ public partial class Form1 : Form
             var ruta = openFileDialog1.FileName;
             boxSignature.Text = ruta;
         }
-
     }
 
     private void Seleccionar_Archivo_Verificar(object sender, EventArgs e)

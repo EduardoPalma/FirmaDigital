@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FirmaDigital.signature
 {
-    internal class Authentication
+    internal static class Authentication
     {
         public static byte[] Hash512(byte[] bytes)
         {

@@ -29,6 +29,7 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.boxSignature = new System.Windows.Forms.TextBox();
@@ -54,7 +55,9 @@ partial class Form1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 76);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label1.Location = new System.Drawing.Point(20, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 15);
             this.label1.TabIndex = 1;
@@ -62,33 +65,41 @@ partial class Form1
             // 
             // boxSignature
             // 
-            this.boxSignature.Location = new System.Drawing.Point(152, 68);
+            this.boxSignature.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.boxSignature.Location = new System.Drawing.Point(152, 46);
             this.boxSignature.Name = "boxSignature";
             this.boxSignature.Size = new System.Drawing.Size(451, 23);
             this.boxSignature.TabIndex = 2;
             // 
             // seleccionArchivo
             // 
-            this.seleccionArchivo.Location = new System.Drawing.Point(622, 68);
+            this.seleccionArchivo.Image = ((System.Drawing.Image)(resources.GetObject("seleccionArchivo.Image")));
+            this.seleccionArchivo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.seleccionArchivo.Location = new System.Drawing.Point(609, 46);
             this.seleccionArchivo.Name = "seleccionArchivo";
-            this.seleccionArchivo.Size = new System.Drawing.Size(134, 23);
+            this.seleccionArchivo.Size = new System.Drawing.Size(137, 23);
             this.seleccionArchivo.TabIndex = 3;
-            this.seleccionArchivo.Text = "Seleccionar Archivo";
+            this.seleccionArchivo.Text = "Seleccionar archivo";
+            this.seleccionArchivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.seleccionArchivo.UseVisualStyleBackColor = true;
             this.seleccionArchivo.Click += new System.EventHandler(this.Seleccionar_Archivo_Firmar);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(307, 97);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(286, 85);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.Size = new System.Drawing.Size(151, 30);
             this.button1.TabIndex = 4;
             this.button1.Text = "Firmar Documento";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Firma_Archivo_Click);
             // 
             // boxVerify
             // 
+            this.boxVerify.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.boxVerify.Location = new System.Drawing.Point(152, 254);
             this.boxVerify.Name = "boxVerify";
             this.boxVerify.Size = new System.Drawing.Size(451, 23);
@@ -105,28 +116,34 @@ partial class Form1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(622, 254);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(609, 254);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 23);
+            this.button2.Size = new System.Drawing.Size(137, 23);
             this.button2.TabIndex = 7;
             this.button2.Text = "Seleccionar Archivo";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Seleccionar_Archivo_Verificar);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(307, 282);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(286, 283);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 23);
+            this.button3.Size = new System.Drawing.Size(151, 32);
             this.button3.TabIndex = 8;
             this.button3.Text = "Verificar Documento";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Verificar_Archivo_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(152, 133);
+            this.label3.Location = new System.Drawing.Point(152, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 15);
             this.label3.TabIndex = 11;
@@ -151,14 +168,17 @@ partial class Form1
             // 
             // hashFirma
             // 
-            this.hashFirma.Location = new System.Drawing.Point(152, 151);
+            this.hashFirma.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.hashFirma.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.hashFirma.Location = new System.Drawing.Point(152, 141);
             this.hashFirma.Name = "hashFirma";
-            this.hashFirma.Size = new System.Drawing.Size(451, 66);
+            this.hashFirma.Size = new System.Drawing.Size(451, 78);
             this.hashFirma.TabIndex = 14;
             this.hashFirma.Text = "";
             // 
             // hashVerificacion
             // 
+            this.hashVerificacion.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.hashVerificacion.Location = new System.Drawing.Point(152, 332);
             this.hashVerificacion.Name = "hashVerificacion";
             this.hashVerificacion.Size = new System.Drawing.Size(457, 68);
@@ -167,21 +187,21 @@ partial class Form1
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(654, 151);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(637, 141);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 67);
+            this.button4.Size = new System.Drawing.Size(92, 78);
             this.button4.TabIndex = 16;
-            this.button4.Text = "Mostrar Clave Privada";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.MostrarClavePrivada);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(654, 333);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(637, 323);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 67);
+            this.button5.Size = new System.Drawing.Size(92, 76);
             this.button5.TabIndex = 17;
-            this.button5.Text = "Mostrar Clave Publica";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.MostrarClavePublica);
             // 
@@ -189,6 +209,7 @@ partial class Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(779, 427);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -206,7 +227,7 @@ partial class Form1
             this.Controls.Add(this.seleccionArchivo);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Firma Digital";
             this.ResumeLayout(false);
             this.PerformLayout();
 
